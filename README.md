@@ -1,2 +1,2 @@
 # NativeEconomy
-What if FiveM economy servers weren't Total
+What if FiveM economy servers didn't have crap, janky html interfaces that aren't user friendly and ran smoothly? What a dream...
