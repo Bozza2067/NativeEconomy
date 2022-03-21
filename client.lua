@@ -1,17 +1,20 @@
-walletBalance = 69
-bankBalance = 0
+-- Set default balance
+WalletBalance = 100
+BankBalance = 2000
 
+StatSetInt("MP0_WALLET_BALANCE", WalletBalance, true)
+StatSetInt("BANK_BALANCE", BankBalance, true)
+
+-- Update balance stat every 5 seconds
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(30000)
-        StatSetInt("MP0_WALLET_BALANCE", walletBalance, true)
-        StatSetInt("BANK_BALANCE", bankBalance, true)
+        Citizen.Wait(5000)
+        StatSetInt("MP0_WALLET_BALANCE", WalletBalance, true)
+        StatSetInt("BANK_BALANCE", BankBalance, true)
     end
 end)
 
-StatSetInt("MP0_WALLET_BALANCE", walletBalance, true)
-StatSetInt("BANK_BALANCE", bankBalance, true)
-
+-- Show current balance in the corner like in GTA:O
 Citizen.CreateThread(function()
     while true do
         if IsControlPressed(0, 48) then
