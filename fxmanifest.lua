@@ -1,6 +1,6 @@
 fx_version 'cerulean'
 game 'gta5'
-description 'PolicingMP Economy'
+description 'NativeEconomy'
 author 'Boz'
 
 client_script 'client.lua'
